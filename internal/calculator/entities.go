@@ -18,9 +18,9 @@ const (
 // Ошибки калькулятора. Создаём один раз, чтобы обработчик мог узнать ошибку
 // через errors.Is и ответить клиенту нужным кодом.
 var (
-	ErrUnknowOperation = errors.New("unknow operation") // операции нет в списке выше
-	ErrDivzionByZero   = errors.New("divizion by zero") // делить на ноль нельзя
-	ErrNegativeAmount  = errors.New("negative amount")  // сумма не может быть меньше нуля
+	ErrUnknownOperation = errors.New("unknow operation") // операции нет в списке выше
+	ErrDivisionByZero   = errors.New("divizion by zero") // делить на ноль нельзя
+	ErrNegativeAmount   = errors.New("negative amount")  // сумма не может быть меньше нуля
 )
 
 // Request - что присылает клиент, например {"a": 100, "b": 3, "op": "div"}.

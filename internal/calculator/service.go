@@ -26,11 +26,11 @@ func (s *Service) Calculate(req Request) (Response, error) {
 	case OpDiv:
 		// Проверка нужна до деления: на целых числах деление на 0 роняет программу.
 		if req.B == 0 {
-			return Response{}, ErrDivzionByZero
+			return Response{}, ErrDivisionByZero
 		}
 		return Response{Result: req.A / req.B, Remainder: req.A % req.B}, nil
 	default:
-		return Response{}, ErrUnknowOperation
+		return Response{}, ErrUnknownOperation
 	}
 
 }
